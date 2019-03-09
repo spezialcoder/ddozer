@@ -75,7 +75,7 @@ if method == "raw":
     pkg = IP(dst=target)/load
     print 
     print "\x1b[31m#########################DDOS STARTING...######################"
-    print "Method: icmp"
+    print "Method: Raw"
     print "Target: {0}".format(target)
     print "Threads: {0}".format(thread_count)
     print "###############################################################\x1b[39m"
