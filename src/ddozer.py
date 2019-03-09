@@ -60,7 +60,10 @@ else:
     method = "std"
 if method == "raw":
     print 
-    target = raw_input("\x1b[36mTarget: \x1b[31m")
+    try:
+        target = raw_input("\x1b[36mTarget: \x1b[31m")
+    except:
+        exit()
     while True:
         try:
             thread_count = int(raw_input("\x1b[36mThreads: \x1b[31m"))
@@ -102,7 +105,10 @@ if method == "raw":
                         break
             exit()
 else:
-    target = raw_input("\x1b[36mTarget: \x1b[31m")
+    try:
+        target = raw_input("\x1b[36mTarget: \x1b[31m")
+    except:
+        exit()
     while True:
         try:
             port = int(raw_input("\x1b[36mPort: \x1b[31m"))
