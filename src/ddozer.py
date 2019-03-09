@@ -1,3 +1,5 @@
+#Developer: developermind405@gmail.com
+#Written by Lewin Sorg
 from scapy.all import *
 import socket,threading,argparse,sys,time
 method = None
