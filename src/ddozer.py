@@ -122,7 +122,7 @@ else:
     print "Target: {0}".format(target)
     print "Threads: {0}".format(thread_count)
     print "###############################################################\x1b[39m"
-    print
+    print "\a"
     yn = raw_input("\x1b[36mExecute (\x1b[32my\x1b[36m,\x1b[31mn\x1b[36m)?\x1b[39m ")
     if yn.lower() == "y":
             for i in range(thread_count):
