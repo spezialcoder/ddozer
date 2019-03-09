@@ -124,7 +124,7 @@ else:
     print "\x1b[39m"
     print 
     print "\x1b[31m#########################DDOS STARTING...######################"
-    print "Method: Standart"
+    print "Method: Standard"
     print "Target: {0}".format(target)
     print "Threads: {0}".format(thread_count)
     print "###############################################################\x1b[39m"
