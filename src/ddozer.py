@@ -21,7 +21,7 @@ parser.add_argument("--raw",help="Attack without a open Port",action="store_true
 args = parser.parse_args()
 ##################################DDOS METHODS#########################################
 def ddos_raw(pkg):
-    global ready,pkgcount
+    global ready
     while True:
         if ready:
             break
