@@ -7,6 +7,7 @@ method = None
 pkgcount = 0
 ready = False
 close = False
+print "Good Hardware is recommended"
 print "\x1b[36m"
 print """
 |  _ \|  _ \ / _ \__  / ____|  _ \ 
