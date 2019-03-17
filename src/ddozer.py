@@ -127,6 +127,7 @@ else:
             print "Only Numbers!"
     while True:
         try:
+            print "500 threads are recommended with good hardware"
             thread_count = int(raw_input("\x1b[36mThreads: \x1b[31m"))
             break
         except:
